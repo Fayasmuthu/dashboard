@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Progress Chart</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.progress-chart {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.progress-bars {
+    height: 300px;
+    align-items: flex-end;
+}
+
+.progress.vertical {
+    height: 100%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 5px;
+    background-color: #3a3a3a;
+    border-radius: 5px;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+}
+
+.progress-bar.volume {
+    background-color: #81e6d9;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.progress-bar.service {
+    background-color: #4a5568;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.volume-color {
+    background-color: #81e6d9;
+}
+
+.service-color {
+    background-color: #4a5568;
+}
+
+    </style>
+</head>
+<body>
+    <!-- <div class="container mt-5"> -->
+        <div class="progress-chart text-center">
+            <h5 class="text-white">Level</h5>
+            <div class="progress-bars d-flex justify-content-around">
+                <div class="progress vertical">
+                    <div class="progress-bar service" style="height: 0%;"></div>
+                    <div class="progress-bar volume" style="height: 60%;"></div>
+                </div>
+                <div class="progress vertical">
+                    <div class="progress-bar service" style="height: 0%;"></div>
+                    <div class="progress-bar volume" style="height: 80%;"></div>
+                </div>
+                <div class="progress vertical">
+                    <div class="progress-bar service" style="height: 0%;"></div>
+                    <div class="progress-bar volume" style="height: 40%;"></div>
+                </div>
+                <div class="progress vertical">
+                    <div class="progress-bar service" style="height: 40%;"></div>
+                    <div class="progress-bar volume" style="height: 60%;"></div>
+                </div>
+                <div class="progress vertical">
+                    <div class="progress-bar service" style="height: 60%;"></div>
+                    <div class="progress-bar volume" style="height: 40%;"></div>
+                </div>
+                <div class="progress vertical">
+                    <div class="progress-bar service" style="height: 100%;"></div>
+                    <div class="progress-bar volume" style="height: 0%;"></div>
+                </div>
+            </div>
+            <div class="legend d-flex justify-content-center mt-3">
+                <div class="legend-item mx-3">
+                    <span class="volume-color"></span> Volume
+                </div>
+                <div class="legend-item mx-3">
+                    <span class="service-color"></span> Service
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</body>
+</html>
